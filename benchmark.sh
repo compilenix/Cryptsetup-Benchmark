@@ -1,5 +1,6 @@
 #!/bin/bash
-echo
+echo -en "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND.\n\nRead and understand the code/script BEFORE you run this! (press enter to continue or control+c to return to safety)"
+read
 path_started_at=$(pwd);
 ramdisk_name="tmpfs_ramdisk_cryptsetup_test";
 ramdisk_size="1250M";
@@ -13,7 +14,7 @@ cryptsetup_args_hash_digest="sha256";
 
 uname -a;
 cat /proc/crypto | grep xts | grep aes | grep driver --color=no;
-#cryptsetup benchmark;
+cryptsetup benchmark;
 mkdir -pv "/mnt/${ramdisk_name}" \
 && mount -v -t tmpfs -o size="${ramdisk_size}" tmpfs "/mnt/${ramdisk_name}" \
 && cd "/mnt/${ramdisk_name}" \
