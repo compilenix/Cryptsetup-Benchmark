@@ -14,7 +14,7 @@ cryptsetup_args_hash_digest="sha256";
 
 
 trap clean_up SIGHUP SIGINT SIGTERM;
-echo "start doing stuff... it's safe to interupt this at any time (control+c)." 1>&2
+echo "start doing stuff... it's safe to interupt this at any time (control+c)." 1>&2;
 set -x;
 {
 
