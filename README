@@ -1,3 +1,13 @@
 Do NOT trust this code!
 
 Read and understand it yourself BEFORE running this!
+
+Dependencies:
+- bash
+- any aes kernel module
+- any sha256 kernel module
+- xts kernel module
+- tempfs (ramdisk support)
+- truncate
+- cryptsetup
+- xfs kernel module
