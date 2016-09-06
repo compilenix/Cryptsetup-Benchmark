@@ -29,7 +29,7 @@ function clean_up() {
 
 uname -a;
 cat /proc/crypto | grep xts | grep aes | grep driver --color=no;
-#cryptsetup benchmark;
+cryptsetup benchmark;
 mkdir -pv "/mnt/${ramdisk_name}" \
     && mount -v -t tmpfs -o size="${ramdisk_size}" tmpfs "/mnt/${ramdisk_name}" \
     && cd "/mnt/${ramdisk_name}" \
